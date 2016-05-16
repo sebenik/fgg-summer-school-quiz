@@ -1,0 +1,214 @@
+@font-face {
+  font-family: Oswald;
+  src: url('../font/Oswald-Regular.ttf');
+}
+* {
+  font-family: Oswald, Arial
+}
+body {
+  margin: 0;
+  background: url('../img/ozadje.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+table.grxd {
+  width: 100%;
+  height: 100%;
+}
+hr {
+  margin: 0 15px;
+}
+.button {
+  display: block;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration: underline;
+}
+.tick {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-bottom: -8px;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjRweCIgdmVyc2lvbj0iMS4xIiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiPgogIDxnPgogICAgPGcgZmlsbD0iIzFEMUQxQiI+CiAgICAgIDxwYXRoIGQ9Im02My4yMjgsLjQ1OWMtMC44ODktMC43MjEtMi4xODYtMC41NzYtMi44OTksMC4zMmwtMzIuOTI5LDQxLjQzNS0xMC43ODEtMTMuNTY1Yy0wLjcxMy0wLjg5Ny0yLjAxMy0xLjA0Mi0yLjktMC4zMi0wLjg4OCwwLjcyMS0xLjAzMSwyLjAzMi0wLjMxNSwyLjkzMWwxMS45MjksMTUuMDExYzAuMzYxLDAuNjQ2IDEuMDM4LDEuMDMyIDEuNzY4LDEuMDMyIDAuMTE1LDAgMC4yMzEtMC4wMzMgMC4zNDktMC4wNTMgMC4wNjYsMC4wMDggMC4xMzMsMC4wNDQgMC4yMDIsMC4wNDQgMC42NTIsMCAxLjI4Ny0wLjMxOSAxLjY4OC0wLjg2bDM0LjIwNS00My4wNDVjMC43MTUtMC44OTcgMC41NzItMi4yMDktMC4zMTctMi45M3oiIGZpbGw9IiNlM2Q2MjQiLz4KICAgICAgPHBhdGggZD0ibTU5LjE1OSwyMS4xODRjLTEuMTQsMC0yLjA2MiwwLjkzMy0yLjA2MiwyLjA4NHYzNC40NzhjMCwxLjE0OS0wLjkyNiwyLjA4NS0yLjA2NCwyLjA4NWgtNDguODQyYy0xLjEzOSwwLTIuMDY0LTAuOTM2LTIuMDY0LTIuMDg1di00OS4zNTNjMC0xLjE0OCAwLjkyNi0yLjA4NCAyLjA2NC0yLjA4NGgzMy44MTFjMS4xNDEsMCAyLjA2My0wLjkzNCAyLjA2My0yLjA4NiAwLTEuMTUtMC45MjMtMi4wODQtMi4wNjMtMi4wODRoLTMzLjgxMWMtMy40MTQsMC02LjE5LDIuODA1LTYuMTksNi4yNTR2NDkuMzUzYzAsMy40NDkgMi43NzYsNi4yNTUgNi4xOSw2LjI1NWg0OC44NDFjMy40MTQsMCA2LjE5MS0yLjgwNiA2LjE5MS02LjI1NXYtMzQuNDc4YzAuMDAxLTEuMTUyLTAuOTIyLTIuMDg0LTIuMDY0LTIuMDg0eiIgZmlsbD0iI2UzZDYyNCIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==);
+}
+#btn-load-image,
+#btn-load-questions {
+  border: 2px solid #e3d624;
+  background-color: rgba(29,114,189,1);
+  color: #e3d624;
+}
+#btn-load-image:hover,
+#btn-load-questions:hover {
+  background-color: rgba(29,114,189,0.5);
+}
+#quiz-create {
+  border: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+#quiz-create:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.header {
+  background: url('../img/ozadje_header.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 0 20px 0;
+}
+.header h1 {
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+}
+.header img {
+  height: 60px;
+  margin-right: 20px;
+}
+.content h1 {
+  display: table;
+  position: relative;
+  top: 40vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  padding: 0;
+  color: #333;
+  font-weight: 100;
+}
+.header a {
+  text-decoration: none;
+}
+#header-title {
+  background-color: #000;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 20px;
+}
+#header-title a {
+  color: #fff;
+}
+.float_l {
+  float: left;
+}
+.float_r {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.text-center {
+  text-align: center;
+}
+#quiz-table {
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.effect2 {
+  position: relative;
+}
+.effect2:before,
+.effect2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #000;
+  -webkit-box-shadow: 0 15px 10px #000;
+  -moz-box-shadow: 0 15px 10px #000;
+  box-shadow: 0 15px 10px #000;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+
+}
+.effect2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+.click-me {
+  border: 1px solid #aaa;
+  padding: 0;
+  margin: 0;
+  color: #aaa;
+  cursor: pointer;
+  background: url('../img/ozadje_header.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 1;
+  font-size: 24px;
+}
+.click-me:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.q-img,
+.q-video {
+  margin-top: 10px;
+}
+.file-button {
+  visibility: hidden;
+  position: absolute;
+}
+#sidr img {
+  display: block;
+  margin: 0 auto;
+}
+#sidr {
+  background: url('../img/ozadje_menu.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#quiz-help {
+  margin: 0 auto;
+  max-width: 90%;
+  width: 800px;
+  display: none;
+}
+#quiz-help a {
+  color: #333;
+}
+#quiz-help pre {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#quiz-help  h2 {
+  display: table;
+  padding: 0;
+  margin: 0 auto;
+  color: #333;
+  font-weight: 100;
+}
+#quiz-help #close-help {
+  font-size: 30px;
+  cursor: pointer;
+}
+

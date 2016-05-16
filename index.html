@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FGG - KVIZ</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/jquery.sidr.bare.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/jquery.sidr.dark.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/vex.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/vex-theme-wireframe.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="./js/jquery.sidr.min.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/vex.min.js"></script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <div id="header-title">
+        <div class="float_l">
+          <a href="http://www.ul.si" target="_blank">UNIVERZA V LJUBLJANI</a> &nbsp; | &nbsp; <a href="http://www3.fgg.uni-lj.si" target="_blank">FAKULTETA ZA GRADBENIŠTVO IN GEODEZIJO</a>
+        </div>
+        <div class="float_r">
+          Contact: Katarina Sirk <a href="mailto:ksirk@fgg.uni-lj.si">(ksirk@fgg.uni-lj.si)</a>, Žiga Šebenik <a href="mailto:ziga@sebenik.com">(ziga@sebenik.com)</a>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="float_l">
+        <a id="menu" href="#sidr">
+          <h1>☰ OD PROJEKTA DO OBJEKTA - POLETNA ŠOLA FGG 2016</h1>
+        </a>
+      </div>
+      <div class="float_r">
+        <img src="./img/ulfgg.png" alt=""/>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="content">
+      <h1 class="text-center">Click on the ☰ icon to open or close the menu.</h1>
+      <div id="quiz-table" class="effect2"></div>
+      <div id="quiz-help">
+        <div id="close-help" class="toggle-help float_r">&#10006;</div>
+        <h2>Navodila za kviz</h2>
+        <p>
+          Za kviz potrebuješ sliko in datoteko z vprašanji.
+        </p>
+        <p>
+          Sliko naložiš iz diska s klikom na gumb 'Naloži sliko'. Če je slika večja kot širina ali višina zaslona, se bo le ta ustrezno pomanjšala, tako da bo na zaslonu vidna celotna slika.
+        </p>
+        <p>
+          Vprašanja naložiš iz diska s klikom na gumb 'Naloži vprašanja'. Datoteka z vprašanji mora biti v JSON formatu. (več o formatu lahko prebereš <a href="http://www.json.org/">tu</a>.)
+          </br />
+          Datoteka naj vsebuje seznam vprašanj, ki je ograjen z oglatimi oklepaji '[]', znotraj katerega se nahajajo posamezna vprašanja ločena z vejico in ograjena z zavitimi oklepaji '{}'. Vsakemu vprašanju lahko dodaš atribute (id, text, imgUrl, ytId), ki se med seboj ločeni z vejico, ime atributa in njegova vrednost pa sta ločena z dvopičjem ':'.
+          </br />
+          Primer vprašanja:
+          </br />
+          <pre>
+            {"id":1, "text":"Kaj je na sliki?", "imgUrl": "http://i.imgur.com/YsbKHg1.gif?noredirect"}</pre>
+          Opis atrubutov:
+          <ul>
+            <li>
+              id: - zaporedna številka vprašanja (obvezno polje)
+            </li>
+            <li>
+              text: - Vprašanje oz tekst, ki naj se prikaže. Besedilo je potrebno zapisati v narakovajih. (obvezno polje)
+            </li>
+            <li>
+              imgUrl: - Če želiš ob vprašanju prikazati sliko, lahko to storiš tako, da vprašanju dodaš ta atribut v katerega zapišeš spletni naslov slike. Naslov je potrebno zapisati v narekovajih. (poljubno polje)
+            </li>
+            <li>
+              ytId: - Če želiš ob vprašanju prikazati video ki se nahaja na youtube-u, lahko to storiš tako, da vprašanju dodaš ta atribut v katerega zapišeš ID youtube posnetka. ID je potrebno zapisati v narekovajih, najdeš pa ga v spletnem naslovu izbranega posnetka. Primer (url posnetka: https://www.youtube.com/watch?v=gGFcfv6InvA). Id za ta video =  gGFcfv6InvA. (poljubno polje)
+            </li>
+          </ul>
+          Primer datoteke z vprašanji ('vprasanja.txt'):
+          </br />
+          <pre>
+          [
+            {"id":1, "text":"Kaj postane Peter ko poje banano?"},
+            {"id":2, "text":"Kaj je na sliki?", "imgUrl": "http://i.imgur.com/YsbKHg1.gif?noredirect"},
+            {"id":3, "text":"Kaj je na posnetku?", "ytId": "gGFcfv6InvA"},
+            {"id":4, "text":"Who's the real Kekec?"}
+          ]</pre>
+          Glede na število vprašanj v datoteki, se bodo ob kliku na gumb 'Naloži kviz' na zaslonu izrisala polja, ki prekrivajo izbrano sliko. Če je število vprašanj liho oziroma število vprašanj ni takšno, da bi lahko čez sliko napeli približno kvadratno mrežo, je lahko nekaj zadjih polj z vprašanji nekoliko večjih kot so ostala polja. 
+        </p>
+        <p>
+          S klikom na posamezno polje se odpre okno z vprašanjem. S klikom na gumb 'Pravilno', se polje odkrije in prikaže se del slike pod poljem.
+        </p>
+        <label class="button toggle-help text-center">Skrij navodila</label>
+      </div>
+    </div>
+
+    <div id="sidr">
+      <img src="./img/prihodnost.png" alt=""/>
+      <label class="button toggle-help">Navodila</label>
+      <hr />
+      <label class="button" id="btn-load-image" for="quiz-load-image">Naloži sliko<span></span></label>
+      <input type='file' accept='image/*' onchange='openImage(event)' class="file-button" id="quiz-load-image">
+      <label class="button" id="btn-load-questions" for="quiz-load-questions">Naloži vprašanja<span></span></label>
+      <input type='file' accept='text/plain' onchange='openText(event)' class="file-button" id="quiz-load-questions">
+      <label class="button" id="quiz-create">Naloži kviz</label>
+      <hr />
+      <label class="button" id="quiz-reveal">Odkrij vsa polja</label>
+      <hr />
+      <label class="button" id="quiz-hide">Skrij vsa polja</label>
+      <hr />
+    </div>
+
+  </body>
+</html>
