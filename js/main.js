@@ -100,6 +100,8 @@ $(window).ready(function() {
   function loadQuiz() {
     quizLoaded = true;
     $('.content h1').hide();
+    $('#quiz-help').hide('fast');
+    $('#quiz-table').show('fast');
     drawTable();
     placeImg(quizImage);
     $(window).off('resize');
