@@ -101,12 +101,13 @@ $(window).ready(function() {
     quizLoaded = true;
     $('.content h1').hide();
     $('#quiz-help').hide('fast');
-    $('#quiz-table').show('fast');
-    drawTable();
-    placeImg(quizImage);
-    $(window).off('resize');
-    $(window).resize(function() {
+    $('#quiz-table').show('fast', function() {
+      drawTable();
       placeImg(quizImage);
+      $(window).off('resize');
+      $(window).resize(function() {
+        placeImg(quizImage);
+      });
     });
   }
 
